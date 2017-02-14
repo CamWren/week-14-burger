@@ -1,0 +1,24 @@
+{
+  "name": "week-14-burger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CamWren/week-14-burger.git"
+  },
+  "author": "Cam Wren",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CamWren/week-14-burger/issues"
+  },
+  "homepage": "https://github.com/CamWren/week-14-burger#readme"
+}
