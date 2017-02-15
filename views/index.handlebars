@@ -1,0 +1,54 @@
+<h1>GETCHA BURGAS HERE!</h1>
+
+<h2>YUH BURGA'S READY OVA HERE!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless this.sleepy}}
+      <li>
+        {{this.name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="devoured" value="true">
+          <button type="submit">DEVOUR</button>
+        </form>
+
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>BURGAS YOU'VE EATEN OVA HERE!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if this.devoured}}
+      <li>
+        {{this.name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="devoured" value="false">
+          <button type="submit">DEVOUR</button>
+        </form>
+
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>ADD A BURGA OVA HERE!</h2>
+<form class="create-update-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="burger">Burga Name:</label>
+    <input type="text" id="burger" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="devoured">Devoured?</label><br>
+    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
+    <input type="radio" name="devoured" value="0"> EATEN
+  </div>
+
+  <button type="submit">Add Burga</button>
+</form>
